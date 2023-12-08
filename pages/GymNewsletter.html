@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page describing items of the newsletter and inviting users to sing up">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/external.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Gym - Healthy and Support</title>
+</head>
+<body onload="spanMsgDayTime()">
+
+    <!--Navbar Section-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="../images/logo.png" alt="Boho Fit Logo" height="30">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Schedules</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="nutrition.html">Nutrition</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="GymPrices.html">Prices</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="GymNewsletter.html">Newsletter</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="">Register</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Our Locations
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Dublin</a>
+                          <a class="dropdown-item" href="#">Cork</a>
+                          <a class="dropdown-item" href="#">Galway</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <main>
+      <!--Title and Image Section-->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1 class="titles-Page">
+              Stay Up to date with our Newsletter!
+            </h1>
+            <h3 id="subtitle-text">
+              <span id="span-msg-hourday">Hello</span>, awaken your potential: Exclusive News and Premium informations to Transform your Fitness Journey!
+            </h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <img src="../images/fit-person.png" alt="fit-person-banner" id="img-banner">
+          </div>
+        </div>
+        
+        <!--Card Section-->
+        <div class="row">
+          <div class="card" style="width: 18rem;">
+            <img src="../images/gymandfood.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Dietician</h5>
+              <p class="card-text">Receive Delicious Recipes, Nutritional Guidance and Inspiration for a Wellbeing Journey. <br><br> Sign up now and embark on this journey towards a healthier and more balanced diet!</p>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">Check Out</button>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img src="../images/gym-water.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Energy Drinks</h5>
+              <p class="card-text">Discover Delicious and Energizing Combinations, Exclusive Recipes and Learn How to Maximize Your Results. <br><br> Sign up now for an extra dose of motivation and flavor in every training session!</p>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">Check Out</button>
+            </div>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <img src="../images/coachgym.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coaching</h5>
+              <p class="card-text">Receive Expert Advice, Effective Training Plans and Constant Motivation to Push Your Limits. <br><br> Sign up now and transform your fitness journey with exclusive insights from our expert trainers. Together, let's achieve your goals!</p>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">Check Out</button>
+            </div>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <img src="../images/supplementsgym.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Supplements</h5>
+              <p class="card-text">Receive Expert Advice, Latest News from the World of Supplements, and In-Depth Guides to Achieving Your Fitness Goals. Don't miss the chance to optimize your training journey. <br><br> Sign up now to unlock your body's fullest potential!</p>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">Check Out</button>
+            </div>
+          </div>
+
+          <!--Modal Content-->
+          <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalLabelForm" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ModalLabelForm">Fill up the form to receive more informations!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="form">
+                    <div class="mb-3">
+                      <label for="nameUser" class="col-form-label">Name:</label>
+                      <input type="text" class="form-control" id="nameUser">
+                    </div>
+                    <div class="mb-3">
+                      <label for="emailUser" class="col-form-label">Email:</label>
+                      <input type="email" class="form-control" id="emailUser">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="subjectUser" class="col-form-label">Subject:</label>
+                      <select class="form-select" id="subjectUser">
+                        <option selected value="">Select a Option</option>
+                        <option value="Diet">Diet</option>
+                        <option value="Drinks">Energy Drinks</option>
+                        <option value="Coaching">Coaching</option>
+                        <option value="Supplements">Supplements</option>
+                      </select>
+                    </div>
+                    
+
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="checkboxTerms">
+                      <label class="form-check-label" for="checkboxTerms">I Accept receive comunications from this website.</label>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="text-center py-3" id="footer-GymHealthy">
+            <p>© 2023 Boho Fit. All Rights Reserved.</p>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

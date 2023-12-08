@@ -1,0 +1,327 @@
+/*Page Index Glen*/
+body {
+    background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
+}
+
+#background-index{
+    background: linear-gradient(90deg, rgba(9,8,8,0.9780433291480655) 3%, rgba(130,4,32,1) 68%, rgba(29,0,71,0.9808027923211169) 96%) !important;
+}
+
+#img-banner-index{
+    margin-top: -100px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mainpage-container{
+    position:relative
+}
+
+#text-banner{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    transition: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+}
+
+.overlay-mainpage{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: .5s;
+    text-align: right;
+}
+
+.mainpage-container:hover .overlay-mainpage{
+    height: 100%;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 200px;
+}
+
+.title-text-banner{
+    color: white;
+    text-decoration: underline;
+}
+
+.item-text-banner{
+    color: white;
+    text-decoration: dashed;
+}
+
+#footer-index{
+    text-align: center;
+    color: white;
+}
+
+/*Page Nutrition Glen*/
+
+.bmibox input{
+    margin: 5px;
+}
+
+.bmibox button{
+    margin: 10px;
+}
+
+
+#footer-nutrition{
+    text-align: center;
+    color: black;
+    margin-top: 200px;
+}
+
+
+@media all  and (max-width: 767px){
+    .image-container{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    #footer-nutrition{
+        margin-top: 0px;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius:px;
+    cursor: pointer;
+}
+
+
+
+/*Adrian CSS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
+/*Gym Healthy CSS*/
+
+@media all  and (max-width: 991px){
+    .titles-Page{
+        width: 700px;
+        font-size: 70px !important;
+        padding-top: 20px !important;
+        font-family: 'Dhurjati', sans-serif;
+    }
+    #subtitle-text{
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 500px;
+    }
+    #img-banner{
+        margin-left: 50px;
+        width: 400px;
+    }
+}
+
+@media all  and (min-width: 414px) and (max-width: 767px){
+    .titles-Page{
+        padding-left: 80px !important;
+        margin-top: -50px !important;
+        font-size: 60px !important;
+        font-family: 'Dhurjati', sans-serif;
+        width: 400px;
+    }
+    #subtitle-text{
+        font-size: 10px !important;
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 300px;
+    }
+    #img-banner{
+        margin-left: 10px;
+        width: 300px;
+    }
+    .card{
+        margin-left: 80px !important;
+    }
+}
+
+@media all  and (max-width: 414px){
+    .titles-Page{
+        padding-left: 30px !important;
+        margin-top: -50px !important;
+        font-size: 40px !important;
+        font-family: 'Dhurjati', sans-serif;
+        width: 400px;
+    }
+    #subtitle-text{
+        font-size: 20px !important;
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 300px;
+    }
+    #img-banner{
+        margin-left: 20px;
+        width: 250px;
+    }
+    .card{
+        margin-left: 50px !important;
+    }
+}
+
+
+.titles-Page{
+    font-size: 80px;
+    color: red;
+    padding-top: 100px;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+.row{
+    margin-top: 100px !important;
+}
+
+.img-banner{
+    width: 450px;
+}
+
+.card{
+    margin: 10px;
+}
+
+/*Gym Prices CSS*/
+
+#body-background{
+    background: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+#titles-Page-Gymprices{
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    margin-bottom: 100px;
+}
+
+
+.container-GymPrices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.row-GymPrices{
+    display: inline-flex;
+}
+
+.card-GymPrices{
+    background-image: linear-gradient(#333, #333);
+    overflow: hidden;
+    border-radius: 16px;
+    max-width: 360px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.card-GymPrices .img-GymPrices{
+    background-image: url('images/couplegym.png');
+    background-position: center;
+    background-size: cover;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .1;
+}
+
+.card-GymPrices:hover .img-GymPrices{
+    opacity: .7;
+}
+
+.card-GymPrices .img-GymPrices span{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card-GymPrices .content-GymPrices{
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    text-align: center;
+}
+
+.card-GymPrices:hover .content-GymPrices{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0);
+    text-align: center;
+}
+
+.card-GymPrices .content-GymPrices p{
+    margin-bottom: 0;
+}
+
+
+.card-GymPrices .content-GymPrices .title-GymPrices{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card-GymPrices .content-GymPrices .desc-GymPrices{
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 1.7;
+}
+
+.card-GymPrices .arrow{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card-GymPrices:hover .arrow{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(0);
+}
+
+#footer-GymPrices{
+    margin-top: 180px;
+    color: black;
+}
+
+@media all  and (max-width: 1200px){
+    .row-GymPrices{
+        display: block;
+    }
+}
