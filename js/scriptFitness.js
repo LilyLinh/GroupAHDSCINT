@@ -21,10 +21,10 @@ function calculateBMI() {
 
     // Output message based on BMI range
     var messages = [
-        "Underweight - You may need to gain some weight.",
+        "Underweight - Eat, Train, Repeat!",
         "Normal Weight - Keep up the good work!",
-        "Overweight - Consider maintaining a healthy diet and exercise.",
-        "Obese - Consult with a healthcare professional."
+        "Overweight - A healthy diet and exercise is adviced .",
+        "Obese - Don't Sweat, we'll help you reach your goals"
     ];
 
     var index = 0;
