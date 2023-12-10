@@ -144,6 +144,10 @@ button {
     margin: 10px;
 }
 
+#checkboxTerms{
+    width: 3%;
+}
+
 @media all  and (max-width: 991px){
     .titles-Page{
         width: 700px;
