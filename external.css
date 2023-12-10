@@ -1,0 +1,498 @@
+
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/*Style applied to index page - Glen*/
+body {
+    background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#background-index{  background: linear-gradient(141deg, rgba(52,19,41,1) 0%, rgba(3,2,0,1) 100%) !important;
+}
+
+#img-banner-index{
+    margin-top: -100px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mainpage-container{
+    position:relative
+}
+
+#text-banner{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    transition: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+}
+
+.overlay-mainpage{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: .5s;
+    text-align: right;
+}
+
+.mainpage-container:hover .overlay-mainpage{
+    height: 100%;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 200px;
+}
+
+.title-text-banner{
+    color: white;
+    text-decoration: underline;
+}
+
+.item-text-banner{
+    color: white;
+    text-decoration: dashed;
+}
+
+#footer-index{
+    text-align: center;
+    color: white;
+}
+
+/*Style of the nutrition page- Glen*/
+
+.bmibox input{
+    margin: 5px;
+}
+
+.bmibox button{
+    margin: 10px;
+}
+
+
+#footer-nutrition{
+    text-align: center;
+    color: black;
+    margin-top: 200px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius:px;
+    cursor: pointer;
+}
+
+@media all  and (max-width: 767px){
+    .image-container{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    #footer-nutrition{
+        margin-top: 0px;
+    }
+}
+
+
+/*Adrian CSS
+/*Gym Healthy CSS - ADRIAN*/
+
+.titles-Page{
+    font-size: 80px;
+    color: red;
+    padding-top: 100px;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+.row{
+    margin-top: 100px !important;
+}
+
+.img-banner{
+    width: 450px;
+}
+
+.card{
+    margin: 10px;
+}
+
+#checkboxTerms{
+    width: 3%;
+}
+
+@media all  and (max-width: 991px){
+    .titles-Page{
+        width: 700px;
+        font-size: 70px !important;
+        padding-top: 20px !important;
+        font-family: 'Dhurjati', sans-serif;
+    }
+    #subtitle-text{
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 500px;
+    }
+    #img-banner{
+        margin-left: 50px;
+        width: 400px;
+    }
+}
+
+@media all  and (min-width: 414px) and (max-width: 767px){
+    .titles-Page{
+        padding-left: 80px !important;
+        margin-top: -50px !important;
+        font-size: 60px !important;
+        font-family: 'Dhurjati', sans-serif;
+        width: 400px;
+    }
+    #subtitle-text{
+        font-size: 10px !important;
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 300px;
+    }
+    #img-banner{
+        margin-left: 10px;
+        width: 300px;
+    }
+    .card{
+        margin-left: 80px !important;
+    }
+}
+
+@media all  and (max-width: 414px){
+    .titles-Page{
+        padding-left: 30px !important;
+        margin-top: -50px !important;
+        font-size: 40px !important;
+        font-family: 'Dhurjati', sans-serif;
+        width: 400px;
+    }
+    #subtitle-text{
+        font-size: 20px !important;
+        padding-left: 80px !important;
+        font-size: 20px !important;
+        width: 300px;
+    }
+    #img-banner{
+        margin-left: 20px;
+        width: 250px;
+    }
+    .card{
+        margin-left: 50px !important;
+    }
+}
+
+/*Gym Prices CSS - ADRIAN*/
+
+#titles-Page-Gymprices{
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    margin-bottom: 100px;
+}
+
+
+.container-GymPrices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.row-GymPrices{
+    display: inline-flex;
+}
+
+.card-GymPrices{
+    background-image: linear-gradient(#333, #333);
+    overflow: hidden;
+    border-radius: 16px;
+    max-width: 360px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.card-GymPrices .img-GymPrices{
+    background-image: url('images/couplegym.png');
+    background-position: center;
+    background-size: cover;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .1;
+}
+
+.card-GymPrices:hover .img-GymPrices{
+    opacity: .7;
+}
+
+.card-GymPrices .img-GymPrices span{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card-GymPrices .content-GymPrices{
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    text-align: center;
+}
+
+.card-GymPrices:hover .content-GymPrices{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0);
+    text-align: center;
+}
+
+.card-GymPrices .content-GymPrices p{
+    margin-bottom: 0;
+}
+
+
+.card-GymPrices .content-GymPrices .title-GymPrices{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card-GymPrices .content-GymPrices .desc-GymPrices{
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 1.7;
+}
+
+.card-GymPrices .arrow{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card-GymPrices:hover .arrow{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(0);
+}
+
+#footer-GymPrices{
+    margin-top: 180px;
+    color: black;
+}
+
+@media all  and (max-width: 1200px){
+    .row-GymPrices{
+        display: block;
+    }
+}
+
+/* CSS Schedule and Subscribe Pages - LINH*/
+
+.subcribeBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;    
+    background: #333 !important;
+    background-attachment: fixed;
+    background-size: cover;
+  
+  }
+  #video-background {
+    position: fixed;
+    background-size: cover;
+    top:0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    height: 100%;
+    z-index: -200;
+  }
+
+  .subcribeH2 {
+    text-align: center;
+  }
+  #myForm{
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+
+  }
+  #subcribeLabel {
+    display: block;
+    margin-bottom: 8px;
+    
+  }
+
+  .label-gender{
+    text-align: center;
+  }
+ 
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="phone"],
+  select,
+  button,
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #agreeDiv{
+    display: flex;
+    align-items: center;
+    padding-right: 150px;
+  }
+  #agree{
+    align-self: flex-start;
+    margin-right: 10px;
+  }
+  #termAgree{
+    white-space: nowrap;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .btn-custom {
+      background-color: black;
+      margin-left: 20px;
+      color: white;
+    }
+
+  #class-schedule{
+    text-align:center;
+  }
+
+  .bodySchedule {
+    background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    }
+    #Cycling-table,
+    #Body-table,
+    #Yoga-table
+     {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #0d0d0d;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #faf5f5;
+    }
+    .hidden {
+      display: none;
+    }
+    .class-button{ /* Reference: https://fdossena.com/?p=html5cool/buttons/i.frag */
+      margin-left: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display:inline-block;
+      padding:0.3em 1.2em;
+      border-radius:0.5em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'Roboto',sans-serif;
+      font-weight:300;
+      color:#faf6f6;
+      background-color:black;
+      width: 200px;
+      text-align:center;
+      transition: all 0.2s;
+    }
+    .class-button:hover{
+      background-color: #5a5555 ;
+    }
+    @media all and (max-width:30em){
+    .class-button{
+      display:block;
+      margin:0.001em auto;
+    }
+    }
+    .STdiv{
+      width: 100vw; 
+      display: flex; 
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: black;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+   
