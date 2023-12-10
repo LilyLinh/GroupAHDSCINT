@@ -367,6 +367,10 @@ button {
     margin-bottom: 8px;
     
   }
+
+  .label-gender{
+    text-align: center;
+  }
  
   input[type="text"],
   input[type="number"],
