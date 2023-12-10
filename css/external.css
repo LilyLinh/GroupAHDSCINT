@@ -415,6 +415,12 @@ button {
     background-color: #45a049;
   }
 
+  .btn-custom {
+      background-color: black;
+      margin-left: 20px;
+      color: white;
+    }
+
   #class-schedule{
     text-align:center;
   }
