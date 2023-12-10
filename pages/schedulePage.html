@@ -62,31 +62,31 @@
     <h1>Fitness Training Class Schedule</h1>
   </div>
   <div class="buttons">
-    <button class="class-button" data-class="cardio">Cardio</button>
-    <button class="class-button" data-class="strength">Strength</button>
-    <button class="class-button" data-class="yoga">Yoga</button>
+    <button class="class-button" data-class="Cycling">Cycling</button>
+    <button class="class-button" data-class="Body">Body Build</button>
+    <button class="class-button" data-class="Yoga">Yoga</button>
   </div>
 
-  <!-- Cardio Class Schedule -->
-  <div class="class-schedule cardio-schedule hidden">
-    <h2 id="class-schedule">Cardio Class Schedule</h2>
-    <table id="cardio-table">
+  <!-- Cycling Class Schedule -->
+  <div class="class-schedule Cycling-schedule hidden">
+    <h2 id="class-schedule">Cycling Class </h2>
+    <table id="Cycling-table">
       <!-- Schedule content will be dynamically generated -->
     </table>
   </div>
 
-  <!-- Strength Class Schedule -->
-  <div class="class-schedule strength-schedule hidden">
-    <h2 id="class-schedule">Strength Class Schedule</h2>
-    <table id="strength-table">
+  <!-- Body Build Class Schedule -->
+  <div class="class-schedule Body-schedule hidden">
+    <h2 id="class-schedule">Body Build Class </h2>
+    <table id="Body-table">
       <!-- Schedule content will be dynamically generated -->
     </table>
   </div>
 
   <!-- Yoga Class Schedule -->
-  <div class="class-schedule yoga-schedule hidden">
-    <h2 id="class-schedule">Yoga Class Schedule</h2>
-    <table id="yoga-table">
+  <div class="class-schedule Yoga-schedule hidden">
+    <h2 id="class-schedule">Yoga Class </h2>
+    <table id="Yoga-table">
       <!-- Schedule content will be dynamically generated -->
     </table>
   </div>
@@ -104,49 +104,50 @@
   <script>
     $(function () {
       const classSchedules = { /*https://learn.jquery.com/using-jquery-core/document-ready/*/
-        "cardio": {
-          "Monday": ["Running", "Cycling", "Running", "Cycling", "Running", "Cycling", "Running"],
-          "Tuesday": ["Running", "Cycling", "Running", "Cycling", "Running", "Jumping", "Running"],
-          "Wednesday": ["Jumping", "Cycling", "Jumping", "Cycling", "Running", "Jumping", "Running"],
-          "Thursday":["Running", "Cycling", "Running", "Cycling", "Running", "Jumping", "Running"],
-          "Friday": ["Jumping", "Cycling", "Jumping", "Cycling", "Running", "Jumping", "Running"],
-          "Saturday": ["Jumping", "Cycling", "Jumping", "Cycling", "Running", "Jumping", "Running"],
+        "Cycling": {
+          "Monday": ["Running", "Running", "Cycling", "Running", "Cycling"],
+          "Tuesday": ["Running", "Running", "Cycling", "Running", "Jumping"],
+          "Wednesday": ["Jumping", "Jumping", "Cycling", "Running", "Jumping"],
+          "Thursday":["Running", "Running", "Cycling", "Running", "Jumping"],
+          "Friday": ["Jumping", "Jumping", "Cycling", "Running", "Jumping"],
+          "Saturday": ["Jumping", "Jumping", "Cycling", "Running", "Jumping"],
         },
-        "strength": {
-          "Monday": ["FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT"],
-          "Tuesday": [" Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates"],
-          "Wednesday": ["FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT"],
-          "Thursday":[" Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates"],
-          "Friday": ["FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT"],
-          "Saturday": [" Pilates", "FITT", "Pilates", "FITT", "Pilates", "FITT", "Pilates"],
+        "Body": {
+          "Monday": ["FITT", "FITT", "Pilates", "FITT", "Pilates"],
+          "Tuesday": [" Pilates", "Pilates", "FITT", "Pilates", "FITT"],
+          "Wednesday": ["FITT", "FITT", "Pilates", "FITT", "Pilates"],
+          "Thursday":[" Pilates", "Pilates", "FITT", "Pilates", "FITT"],
+          "Friday": ["FITT", "FITT", "Pilates", "FITT", "Pilates"],
+          "Saturday": [" Pilates", "Pilates", "FITT", "Pilates", "FITT"],
          
         },
-        "yoga": {
-          "Monday": ["Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga"],
-          "Tuesday": ["String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga"],
-          "Wednesday": ["Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga"],
-          "Thursday":["String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga"],
-          "Friday": ["Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga"],
-          "Saturday": ["String yoga", "Astanga", "String yoga", "Astanga", "String yoga", "Astanga", "String yoga"],
+        "Yoga": {
+          "Monday": ["Astanga", "Astanga", "String yoga", "Astanga", "String yoga"],
+          "Tuesday": ["String yoga", "String yoga", "Astanga", "String yoga", "Astanga"],
+          "Wednesday": ["Astanga", "Astanga", "String yoga", "Astanga", "String yoga"],
+          "Thursday":["String yoga", "String yoga", "Astanga", "String yoga", "Astanga"],
+          "Friday": ["Astanga", "Astanga", "String yoga", "Astanga", "String yoga"],
+          "Saturday": ["String yoga", "String yoga", "Astanga", "String yoga", "Astanga"],
         }
       };
 
-      function generateScheduleTable(schedule, tableId) {
+      function createScheduleTable(schedule, tableId) {
         const table = $("#" + tableId);
         table.empty();
 
-        let headerRow = "<tr><th>Time</th>";
-        for (let day in schedule) {
-          headerRow += `<th>${day}</th>`;
-        }
-        headerRow += "</tr>";
-        table.append(headerRow);
+        const daysOfWeek = Object.keys(schedule);
+        let hRow = "<tr><th>Time</th>";
+        daysOfWeek.forEach(day => {
+        hRow += `<th>${day}</th>`;
+      });
+        hRow += "</tr>";
+        table.append(hRow);
 
-        const timeSlots = ["7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM"];
-        timeSlots.forEach(time => {
+        const timeTrain = ["7:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM"];
+        timeTrain.forEach(time => {
           let row = `<tr><td>${time}</td>`;
           for (let day in schedule) {
-            const className = schedule[day][timeSlots.indexOf(time)];
+            const className = schedule[day][timeTrain.indexOf(time)];
             row += `<td>${className || ''}</td>`;
           }
           row += "</tr>";
@@ -157,7 +158,7 @@
       $(".class-button").click(function () {
         const className = $(this).data("class");
         $(".class-schedule").addClass("hidden");
-        generateScheduleTable(classSchedules[className], className + "-table");
+        createScheduleTable(classSchedules[className], className + "-table");
         $("." + className + "-schedule").removeClass("hidden");
       });
     });
