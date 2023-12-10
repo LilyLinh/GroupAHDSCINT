@@ -3,14 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
 /*font-family: 'Montserrat', sans-serif;*/
 
-/*Page Index Glen*/
+/*Style applied to index page - Glen*/
 body {
     background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
-#background-index{
-    background: linear-gradient(90deg, rgba(9,8,8,0.9780433291480655) 3%, rgba(130,4,32,1) 68%, rgba(29,0,71,0.9808027923211169) 96%) !important;
+#background-index{  background: linear-gradient(141deg, rgba(52,19,41,1) 0%, rgba(3,2,0,1) 100%) !important;
 }
 
 #img-banner-index{
@@ -69,7 +68,7 @@ body {
     color: white;
 }
 
-/*Page Nutrition Glen*/
+/*Style of the nutrition page- Glen*/
 
 .bmibox input{
     margin: 5px;
