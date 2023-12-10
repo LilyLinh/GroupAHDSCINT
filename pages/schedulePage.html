@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Training Class Schedule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/external.css">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body class="bodySchedule">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="Boho Fit Logo" height="30">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schedulePage.html">Schedules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nutrition.html">Nutrition</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GymPrices.html">Prices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GymNewsletter.html">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="subcribePage.html">Register</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Our Locations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Dublin</a>
+              <a class="dropdown-item" href="#">Cork</a>
+              <a class="dropdown-item" href="#">Galway</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="STdiv">
+    <h1>Fitness Training Class Schedule</h1>
+  </div>
+  <div class="buttons">
+    <button class="class-button" data-class="cardio">Cardio</button>
+    <button class="class-button" data-class="strength">Strength</button>
+    <button class="class-button" data-class="yoga">Yoga</button>
+  </div>
+
+  <!-- Cardio Class Schedule -->
+  <div class="class-schedule cardio-schedule hidden">
+    <h2 id="class-schedule">Cardio Class Schedule</h2>
+    <table id="cardio-table">
+      <!-- Schedule content will be dynamically generated -->
+    </table>
+  </div>
+
+  <!-- Strength Class Schedule -->
+  <div class="class-schedule strength-schedule hidden">
+    <h2 id="class-schedule">Strength Class Schedule</h2>
+    <table id="strength-table">
+      <!-- Schedule content will be dynamically generated -->
+    </table>
+  </div>
+
+  <!-- Yoga Class Schedule -->
+  <div class="class-schedule yoga-schedule hidden">
+    <h2 id="class-schedule">Yoga Class Schedule</h2>
+    <table id="yoga-table">
+      <!-- Schedule content will be dynamically generated -->
+    </table>
+  </div>
+  <footer class="text-center py-3" id="footer-GymHealthy">
+    <p>© 2023 Boho Fit. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      const classSchedules = { /*https://learn.jquery.com/using-jquery-core/document-ready/*/
+        "cardio": {
+          "Monday": ["Cardio Blast", "HIIT", "", "", "", "", ""],
+          "Tuesday": ["HIIT", "", "", "", "", "", ""],
+          // Add schedule data for other days...
+        },
+        "strength": {
+          "Monday": ["Strength Training", "", "", "", "", "", ""],
+          "Tuesday": ["Body Pump", "Strength Training", "", "", "", "", ""],
+          // Add schedule data for other days...
+        },
+        "yoga": {
+          "Monday": ["Vinyasa Flow", "", "", "", "", "", ""],
+          "Tuesday": ["Restorative Yoga", "Vinyasa Flow", "", "", "", "", ""],
+          // Add schedule data for other days...
+        }
+      };
+
+      function generateScheduleTable(schedule, tableId) {
+        const table = $("#" + tableId);
+        table.empty();
+
+        let headerRow = "<tr><th>Time</th>";
+        for (let day in schedule) {
+          headerRow += `<th>${day}</th>`;
+        }
+        headerRow += "</tr>";
+        table.append(headerRow);
+
+        const timeSlots = ["7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM"];
+        timeSlots.forEach(time => {
+          let row = `<tr><td>${time}</td>`;
+          for (let day in schedule) {
+            const className = schedule[day][timeSlots.indexOf(time)];
+            row += `<td>${className || ''}</td>`;
+          }
+          row += "</tr>";
+          table.append(row);
+        });
+      }
+
+      $(".class-button").click(function () {
+        const className = $(this).data("class");
+        $(".class-schedule").addClass("hidden");
+        generateScheduleTable(classSchedules[className], className + "-table");
+        $("." + className + "-schedule").removeClass("hidden");
+      });
+    });
+  </script>
+</body>
+
+</html>

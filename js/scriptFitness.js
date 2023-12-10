@@ -42,7 +42,7 @@ function calculateBMI() {
 }
 
 
-// JavaScript - Adrian
+// JavaScript Validation Modal And Message User - Adrian
 
 const form = document.querySelector("#form");
 const nameInput = document.querySelector("#nameUser");
@@ -112,3 +112,64 @@ function spanMsgDayTime(){
         document.getElementById("span-msg-hourday").innerHTML = "Good Evening";
     }
 }
+
+
+
+// JavaScript Validation Form - Lihn
+
+function validateForm() {
+    let isValid = true;
+
+    const name = document.getElementById('name').value.trim();
+    const age = document.getElementById('age').value;
+    const email = document.getElementById('email').value.trim();
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const city = document.getElementById('city').value;
+    const agree = document.getElementById('agree').checked;
+
+    const nameError = document.getElementById('nameError');
+    const ageError = document.getElementById('ageError');
+    const emailError = document.getElementById('emailError');
+    const genderError = document.getElementById('genderError');
+    const cityError = document.getElementById('cityError');
+    const agreeError = document.getElementById('agreeError');
+
+    nameError.textContent = '';
+    ageError.textContent = '';
+    emailError.textContent = '';
+    genderError.textContent = '';
+    cityError.textContent = '';
+    agreeError.textContent = '';
+
+    if (name === '') {
+      nameError.textContent = 'Name is required';
+      isValid = false;
+    }
+
+    if (isNaN(age) || age <= 0) {
+      ageError.textContent = 'Please enter a valid age';
+      isValid = false;
+    }
+
+    if (email === '' || !email.includes('@')) {
+      emailError.textContent = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    if (!gender) {
+      genderError.textContent = 'Please select a gender';
+      isValid = false;
+    }
+
+    if (city === '') {
+      cityError.textContent = 'Please select a city';
+      isValid = false;
+    }
+
+    if (!agree) {
+      agreeError.textContent = 'You must agree to the terms and conditions';
+      isValid = false;
+    }
+
+    return isValid;
+  }

@@ -1,10 +1,16 @@
-/*Style applied  the index page -Glen */
+
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/*Page Index Glen*/
 body {
     background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 #background-index{
-      background: linear-gradient(141deg, rgba(52,19,41,1) 0%, rgba(3,2,0,1) 100%) !important;
+    background: linear-gradient(90deg, rgba(9,8,8,0.9780433291480655) 3%, rgba(130,4,32,1) 68%, rgba(29,0,71,0.9808027923211169) 96%) !important;
 }
 
 #img-banner-index{
@@ -63,7 +69,7 @@ body {
     color: white;
 }
 
-/*Style appied to the Nutrition page -Glen */
+/*Page Nutrition Glen*/
 
 .bmibox input{
     margin: 5px;
@@ -80,17 +86,6 @@ body {
     margin-top: 200px;
 }
 
-
-@media all  and (max-width: 767px){
-    .image-container{
-        margin-bottom: 50px;
-        text-align: center;
-    }
-    
-    #footer-nutrition{
-        margin-top: 0px;
-    }
-}
 
 label {
     display: block;
@@ -115,13 +110,39 @@ button {
     cursor: pointer;
 }
 
+@media all  and (max-width: 767px){
+    .image-container{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    #footer-nutrition{
+        margin-top: 0px;
+    }
+}
 
 
-/*Adrian CSS*/
+/*Adrian CSS
+/*Gym Healthy CSS - ADRIAN*/
 
-@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+.titles-Page{
+    font-size: 80px;
+    color: red;
+    padding-top: 100px;
+    font-family: 'Dhurjati', sans-serif;
+}
 
-/*Gym Healthy CSS*/
+.row{
+    margin-top: 100px !important;
+}
+
+.img-banner{
+    width: 450px;
+}
+
+.card{
+    margin: 10px;
+}
 
 @media all  and (max-width: 991px){
     .titles-Page{
@@ -187,31 +208,7 @@ button {
     }
 }
 
-
-.titles-Page{
-    font-size: 80px;
-    color: red;
-    padding-top: 100px;
-    font-family: 'Dhurjati', sans-serif;
-}
-
-.row{
-    margin-top: 100px !important;
-}
-
-.img-banner{
-    width: 450px;
-}
-
-.card{
-    margin: 10px;
-}
-
-/*Gym Prices CSS*/
-
-#body-background{
-    background: linear-gradient(to right, #434343 0%, black 100%);
-}
+/*Gym Prices CSS - ADRIAN*/
 
 #titles-Page-Gymprices{
     font-size: 100px;
@@ -325,3 +322,164 @@ button {
         display: block;
     }
 }
+
+/* CSS Schedule and Subscribe Pages - LIHN*/
+
+.subcribeBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;    
+    background: #333 !important;
+    background-attachment: fixed;
+    background-size: cover;
+  
+  }
+  #video-background {
+    position: fixed;
+    background-size: cover;
+    top:0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    height: 100%;
+    z-index: -200;
+  }
+
+  .subcribeH2 {
+    text-align: center;
+  }
+  #myForm{
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+
+  }
+  #subcribeLabel {
+    display: block;
+    margin-bottom: 8px;
+    
+  }
+ 
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="phone"],
+  select,
+  button,
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #agreeDiv{
+    display: flex;
+    align-items: center;
+    padding-right: 150px;
+  }
+  #agree{
+    align-self: flex-start;
+    margin-right: 10px;
+  }
+  #termAgree{
+    white-space: nowrap;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  #class-schedule{
+    text-align:center;
+  }
+
+  .bodySchedule {
+    background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    }
+    #cardio-table,
+    #strength-table,
+    #yoga-table
+     {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #0d0d0d;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #faf5f5;
+    }
+    .hidden {
+      display: none;
+    }
+    .class-button{
+      margin-left: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display:inline-block;
+      padding:0.3em 1.2em;
+      border-radius:0.5em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'Roboto',sans-serif;
+      font-weight:300;
+      color:#faf6f6;
+      background-color:black;
+      width: 200px;
+      text-align:center;
+      transition: all 0.2s;
+    }
+    .class-button:hover{
+      background-color: #5a5555 ;
+    }
+    @media all and (max-width:30em){
+    .class-button{
+      display:block;
+      margin:0.001em auto;
+    }
+    }
+    .STdiv{
+      width: 100vw; 
+      display: flex; 
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: black;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+   
