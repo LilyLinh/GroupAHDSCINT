@@ -125,15 +125,18 @@ function validateForm() {
     const name = document.getElementById('name').value.trim();
     const age = document.getElementById('age').value;
     const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     const gender = document.querySelector('input[name="gender"]:checked');
     const city = document.getElementById('city').value;
     const agree = document.getElementById('agree').checked;
+
 
 //Access ID to put value 
     const errorElements = [
           document.getElementById('nameError'),
           document.getElementById('ageError'),
           document.getElementById('emailError'),
+          document.getElementById('phonelError'),
           document.getElementById('genderError'),
           document.getElementById('cityError'),
           document.getElementById('agreeError')
@@ -145,7 +148,7 @@ function validateForm() {
             error.textContent = '';
           }
     });
-    
+
 //If the inputI is empty String, put content to the ErrorID
 
     if (name === '') {
@@ -160,6 +163,11 @@ function validateForm() {
 
     if (email === '' || !email.includes('@')) {
       emailError.textContent = 'Please enter a valid email address';
+      isValidate = false;
+    }
+
+    if (phone === '' || !phone.includes(/^[0-9]{10}$/)) {
+      phonelError.textContent = 'Please enter a valid phone number';
       isValidate = false;
     }
 
