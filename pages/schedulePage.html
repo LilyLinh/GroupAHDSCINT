@@ -12,6 +12,7 @@
 </head>
 
 <body class="bodySchedule">
+  /*Navigation bar*/
   <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
     <div class="container">
       <a class="navbar-brand" href="../index.html">
@@ -58,6 +59,7 @@
   </nav>
 
   <br>
+  /*Button for dropdown menu*/
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-custom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         Class Location
@@ -72,13 +74,14 @@
   <div class="STdiv">
     <h1>Fitness Training Class Schedule</h1>
   </div>
+  
   <div class="buttons">
     <button type="button" class="class-button" data-class="Cycling">Cycling</button>
     <button type="button" class="class-button" data-class="Body">Body Build</button>
     <button type="button" class="class-button" data-class="Yoga">Yoga</button>
   </div>
 
-  <!-- Cycling Class Schedule -->
+  /* Cycling Class Schedule */
   <div class="class-schedule Cycling-schedule hidden">
     <h2 id="class-schedule">Cycling Class </h2>
     <table id="Cycling-table">
@@ -86,7 +89,7 @@
     </table>
   </div>
 
-  <!-- Body Build Class Schedule -->
+  /*Body Build Class Schedule*/
   <div class="class-schedule Body-schedule hidden">
     <h2 id="class-schedule">Body Build Class </h2>
     <table id="Body-table">
@@ -94,27 +97,31 @@
     </table>
   </div>
 
-  <!-- Yoga Class Schedule -->
+  /*Yoga Class Schedule*/
   <div class="class-schedule Yoga-schedule hidden">
     <h2 id="class-schedule">Yoga Class </h2>
     <table id="Yoga-table">
       <!-- Schedule content will be dynamically generated -->
     </table>
   </div>
+  
   <footer class="text-center py-3" id="footer-GymHealthy">
     <p>© 2023 Boho Fit. All Rights Reserved.</p>
   </footer>
-
+  
+  /* Use Bootstrap for Nav bar and Drop down button*/
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
+  
+  /*Use Jquery for table data function*/
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(function () {
-      const classSchedules = { /*https://learn.jquery.com/using-jquery-core/document-ready/*/
+      const classSchedules = { /* reference: https://learn.jquery.com/using-jquery-core/document-ready/*/
         "Cycling": {
           "Monday": ["Running", "Running", "Cycling", "Running", "Cycling"],
           "Tuesday": ["Running", "Running", "Cycling", "Running", "Jumping"],
@@ -141,11 +148,13 @@
           "Saturday": ["String yoga", "String yoga", "Astanga", "String yoga", "Astanga"],
         }
       };
-
+      
+      /*Create function, use Jquery to access tableID, clear table*/
       function createScheduleTable(schedule, tableId) {
         const table = $("#" + tableId);
         table.empty();
-
+        
+      /*Use Object.key to add Day into schedule into a row begin from table header Time*/
         const daysOfWeek = Object.keys(schedule);
         let hRow = "<tr><th>Time</th>";
         daysOfWeek.forEach(day => {
@@ -153,7 +162,8 @@
       });
         hRow += "</tr>";
         table.append(hRow);
-
+        
+       /*Access Time and add each value in array to table data cell*/
         const timeTrain = ["7:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM"];
         timeTrain.forEach(time => {
           let row = `<tr><td>${time}</td>`;
@@ -165,7 +175,8 @@
           table.append(row);
         });
       }
-
+      
+      /*when click on button, by add class hidden, it hides all class data, then generate new data and remove hidden to make it visible */
       $(".class-button").click(function () {
         const className = $(this).data("class");
         $(".class-schedule").addClass("hidden");
