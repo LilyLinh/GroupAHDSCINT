@@ -115,11 +115,13 @@ function spanMsgDayTime(){
 
 
 
-// JavaScript Validation Form - Lihn
+// JavaScript Validation Form - Linh
 
 function validateForm() {
-    let isValid = true;
+    let isValidate = true; //let var = true to return value with if//
 
+
+//get value input by access ID
     const name = document.getElementById('name').value.trim();
     const age = document.getElementById('age').value;
     const email = document.getElementById('email').value.trim();
@@ -127,49 +129,54 @@ function validateForm() {
     const city = document.getElementById('city').value;
     const agree = document.getElementById('agree').checked;
 
-    const nameError = document.getElementById('nameError');
-    const ageError = document.getElementById('ageError');
-    const emailError = document.getElementById('emailError');
-    const genderError = document.getElementById('genderError');
-    const cityError = document.getElementById('cityError');
-    const agreeError = document.getElementById('agreeError');
+//Access ID to put value 
+    const errorElements = [
+          document.getElementById('nameError'),
+          document.getElementById('ageError'),
+          document.getElementById('emailError'),
+          document.getElementById('genderError'),
+          document.getElementById('cityError'),
+          document.getElementById('agreeError')
+];
 
-    nameError.textContent = '';
-    ageError.textContent = '';
-    emailError.textContent = '';
-    genderError.textContent = '';
-    cityError.textContent = '';
-    agreeError.textContent = '';
+//Expect the error happended when the textContent is empty String
+    errorElements.forEach(error => {
+          if (error) {
+            error.textContent = '';
+          }
+    });
+    
+//If the inputI is empty String, put content to the ErrorID
 
     if (name === '') {
-      nameError.textContent = 'Name is required';
-      isValid = false;
+      nameError.textContent = 'Name is required to fill';
+      isValidate = false;
     }
 
     if (isNaN(age) || age <= 0) {
-      ageError.textContent = 'Please enter a valid age';
-      isValid = false;
+      ageError.textContent = 'Please enter age number';
+      isValidate = false;
     }
 
     if (email === '' || !email.includes('@')) {
       emailError.textContent = 'Please enter a valid email address';
-      isValid = false;
+      isValidate = false;
     }
 
     if (!gender) {
       genderError.textContent = 'Please select a gender';
-      isValid = false;
+      isValidate = false;
     }
 
     if (city === '') {
       cityError.textContent = 'Please select a city';
-      isValid = false;
+      isValidate = false;
     }
 
     if (!agree) {
-      agreeError.textContent = 'You must agree to the terms and conditions';
-      isValid = false;
+      agreeError.textContent = 'Please tick agree to the terms and conditions';
+      isValidate = false;
     }
 
-    return isValid;
+    return isValidate;
   }
