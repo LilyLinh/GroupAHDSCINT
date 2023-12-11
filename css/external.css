@@ -114,7 +114,7 @@ button {
         margin-bottom: 50px;
         text-align: center;
     }
-    
+
     #footer-nutrition{
         margin-top: 0px;
     }
@@ -226,7 +226,7 @@ button {
     align-items: center;
     justify-content: center;
     color: white;
-    
+
 }
 
 .row-GymPrices{
@@ -327,7 +327,9 @@ button {
 }
 
 /* CSS Schedule and Subscribe Pages - LINH*/
+/*Subcribe page*/
 
+/*set up font, background for page*/
 .subcribeBody {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -335,8 +337,8 @@ button {
     background: #333 !important;
     background-attachment: fixed;
     background-size: cover;
-
   }
+/*Style video background*/
   #video-background {
     position: fixed;
     background-size: cover;
@@ -349,9 +351,12 @@ button {
     z-index: -200;
   }
 
+ /*style for word "Membership Subcription"*/
   .subcribeH2 {
     text-align: center;
   }
+
+ /*Style subcribe form*/
   #myForm{
     max-width: 400px;
     margin: 20px auto;
@@ -360,18 +365,34 @@ button {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-
+  /*Style all id with subcribeLabel(Name, age, email, phone - text)*/
   }
   #subcribeLabel {
     display: block;
     margin-bottom: 8px;
-
   }
 
+  /*Style gender and radio button*/
   .label-gender{
     text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  .lb1{
+    display: flex;
+    flex-direction: row;
+  }
+  .lb1 input{
+    margin-top: 15px;
+    width: 5%;
+  }
+  .lb1 label{
+    width: 100%;
+    padding: 12px;
   }
 
+  /*Style input field*/
   input[type="text"],
   input[type="number"],
   input[type="email"],
@@ -386,6 +407,8 @@ button {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+  /*Style checkbox and agree field*/
   #agreeDiv{
     display: flex;
     align-items: center;
@@ -399,12 +422,15 @@ button {
     white-space: nowrap;
   }
 
+ /*Style class error*/
   .error {
     color: red;
     font-size: 14px;
     margin-bottom: 5px;
     display: block;
   }
+
+ /*Style button Submit*/
   button[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -416,28 +442,33 @@ button {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-
   }
+
   button[type="submit"]:hover {
     background-color: #45a049;
   }
 
+/*Style Page Schedule*/
+/*Style dropdown button*/
   .btn-custom {
       background-color: black;
       margin-left: 20px;
       color: white;
     }
-
+ /*Style all ID ralated name class-schedule*/
   #class-schedule{
     text-align:center;
   }
 
+  /*Style body with background color*/
   .bodySchedule {
     background: linear-gradient(90deg, rgba(255,255,255,0.8435895476354605) 1%, rgba(216,201,223,1) 82%, rgba(150,82,204,0.9808027923211169) 100%) !important;
     margin: 0;
     padding: 0;
     width: 100%;
     }
+
+   /*Style table with ID related*/
     #Cycling-table,
     #Body-table,
     #Yoga-table
@@ -451,6 +482,8 @@ button {
     #Yoga-schedule {
       text-align:center;
     }
+
+    /*Style header, data cell in the table*/
     th, td {
       border: 1px solid #0d0d0d;
       padding: 8px;
@@ -459,9 +492,13 @@ button {
     th {
       background-color: #faf5f5;
     }
+
+    /*Set class related hidden to not display(for Javascript and Jquery code*/
     .hidden {
       display: none;
     }
+
+    /*Style button Cycling, Body build, Yoga*/
     .class-button{ /* Reference: https://fdossena.com/?p=html5cool/buttons/i.frag */
       margin-left: 20px;
       margin-top: 30px;
@@ -488,6 +525,8 @@ button {
       margin:0.001em auto;
     }
     }
+
+    /*Style word: Fitness training class schedule*/
     .STdiv{
       width: 100vw;
       display: flex;
