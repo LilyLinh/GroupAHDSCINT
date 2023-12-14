@@ -125,7 +125,7 @@ function validateForm() {
     const name = document.getElementById('name').value.trim();
     const age = document.getElementById('age').value;
     const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
+    const phone = document.getElementById('phone').value;
     const gender = document.querySelector('input[name="gender"]:checked');
     const city = document.getElementById('city').value;
     const agree = document.getElementById('agree').checked;
@@ -166,7 +166,7 @@ function validateForm() {
       isValidate = false;
     }
 
-    if (phone === '' || !phone.includes(/^[0-9]{10}$/)) {
+   if (phone === '' || !/^[0-9]{10}$/.test(phone)) {
       phonelError.textContent = 'Please enter a valid phone number';
       isValidate = false;
     }
